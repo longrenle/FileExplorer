@@ -318,7 +318,7 @@ public class FileViewInteractionHub implements IOperationProgressListener {
         public void onClick(View v) {
             String path = (String) v.getTag();
             assert (path != null);
-            showDropdownNavigation(false);
+//            showDropdownNavigation(false);
             if (mFileViewListener.onNavigation(path))
                 return;
 
@@ -333,26 +333,26 @@ public class FileViewInteractionHub implements IOperationProgressListener {
     };
 
     protected void onNavigationBarClick() {
-        if (mDropdownNavigation.getVisibility() == View.VISIBLE) {
-            showDropdownNavigation(false);
-        } else {
+//        if (mDropdownNavigation.getVisibility() == View.VISIBLE) {
+//            showDropdownNavigation(false);
+//        } else {
             LinearLayout list = (LinearLayout) mDropdownNavigation.findViewById(R.id.dropdown_navigation_list);
             list.removeAllViews();
             int pos = 0;
+            View listItem = null;
             String displayPath = mFileViewListener.getDisplayPath(mCurrentPath);
+            if(!displayPath.endsWith("/")) {
+            	displayPath += "/";
+            }
             boolean root = true;
-            int left = 0;
-            while (pos != -1 && !displayPath.equals("/")) {//如果当前位置在根文件夹则不显示导航条
+            while (pos != -1) {//如果当前位置在根文件夹则不显示导航条
                 int end = displayPath.indexOf("/", pos);
                 if (end == -1)
                     break;
 
-                View listItem = LayoutInflater.from(mContext).inflate(R.layout.dropdown_item,
+                listItem = LayoutInflater.from(mContext).inflate(R.layout.dropdown_item,
                         null);
 
-                View listContent = listItem.findViewById(R.id.list_item);
-                listContent.setPadding(left, 0, 0, 0);
-                left += 20;
                 ImageView img = (ImageView) listItem.findViewById(R.id.item_icon);
 
                 img.setImageResource(root ? R.drawable.dropdown_icon_root : R.drawable.dropdown_icon_folder);
@@ -360,7 +360,9 @@ public class FileViewInteractionHub implements IOperationProgressListener {
 
                 TextView text = (TextView) listItem.findViewById(R.id.path_name);
                 String substring = displayPath.substring(pos, end);
-                if(substring.isEmpty())substring = "/";
+                if(substring.isEmpty()) {
+                	substring = "/root";
+                }
                 text.setText(substring);
 
                 listItem.setOnClickListener(navigationClick);
@@ -368,14 +370,15 @@ public class FileViewInteractionHub implements IOperationProgressListener {
                 pos = end + 1;
                 list.addView(listItem);
             }
-            if (list.getChildCount() > 0)
-                showDropdownNavigation(true);
+            listItem.setOnClickListener(null);
+//            if (list.getChildCount() > 0)
+//                showDropdownNavigation(true);
 
-        }
+//        }
     }
 
     public boolean onOperationUpLevel() {
-        showDropdownNavigation(false);
+//        showDropdownNavigation(false);
 
         if (mFileViewListener.onOperation(GlobalConsts.OPERATION_UP_LEVEL)) {
             return true;
@@ -483,6 +486,9 @@ public class FileViewInteractionHub implements IOperationProgressListener {
 
         // update move operation button state
         updateConfirmButtons();
+        
+        //add by LRL
+        onNavigationBarClick();
 
     }
 
@@ -676,7 +682,7 @@ public class FileViewInteractionHub implements IOperationProgressListener {
             if (isInSelection() || isMoveState())
                 return;
 
-            showDropdownNavigation(false);
+//            showDropdownNavigation(false);
 
             AdapterContextMenuInfo info = (AdapterContextMenuInfo) menuInfo;
 
@@ -854,7 +860,7 @@ public class FileViewInteractionHub implements IOperationProgressListener {
 
     public boolean onCreateOptionsMenu(Menu menu) {
         clearSelection();
-        showDropdownNavigation(false);
+//        showDropdownNavigation(false);
 
         // menu.add(0, MENU_SEARCH, 0,
         // R.string.menu_item_search).setOnMenuItemClickListener(
@@ -940,7 +946,7 @@ public class FileViewInteractionHub implements IOperationProgressListener {
 
     public void onListItemClick(AdapterView<?> parent, View view, int position, long id) {
         FileInfo lFileInfo = mFileViewListener.getItem(position);
-        showDropdownNavigation(false);
+//        showDropdownNavigation(false);
 
         if (lFileInfo == null) {
             Log.e(LOG_TAG, "file does not exist on position:" + position);
@@ -1056,9 +1062,10 @@ public class FileViewInteractionHub implements IOperationProgressListener {
     }
 
     public boolean onBackPressed() {
-        if (mDropdownNavigation.getVisibility() == View.VISIBLE) {
-            mDropdownNavigation.setVisibility(View.GONE);
-        } else if (isInSelection()) {
+//        if (mDropdownNavigation.getVisibility() == View.VISIBLE) {
+//            mDropdownNavigation.setVisibility(View.GONE);
+//        } else 
+        	if (isInSelection()) {
             clearSelection();
         } else if (!onOperationUpLevel()) {
             return false;

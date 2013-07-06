@@ -1,5 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    
+    <style name="NoActionBar">
+        <item name="android:windowActionBar">true</item>
+        <item name="android:windowNoTitle">false</item>
+    </style>
+    
     <style name="ShadowStyle">
         <item name="android:shadowColor">#6e6e6e</item>
         <item name="android:shadowDx">0.5</item>

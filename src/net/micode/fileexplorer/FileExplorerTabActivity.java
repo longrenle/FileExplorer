@@ -55,14 +55,14 @@ public class FileExplorerTabActivity extends Activity {
         bar.setDisplayOptions(0, ActionBar.DISPLAY_SHOW_TITLE | ActionBar.DISPLAY_SHOW_HOME);
 
         mTabsAdapter = new TabsAdapter(this, mViewPager);
-        mTabsAdapter.addTab(bar.newTab().setText(R.string.tab_category),
-                FileCategoryActivity.class, null);
         mTabsAdapter.addTab(bar.newTab().setText(R.string.tab_sd),
                 FileViewActivity.class, null);
-        mTabsAdapter.addTab(bar.newTab().setText(R.string.tab_remote),
-                ServerControlActivity.class, null);
+        mTabsAdapter.addTab(bar.newTab().setText(R.string.tab_category),
+                FileCategoryActivity.class, null);
+//        mTabsAdapter.addTab(bar.newTab().setText(R.string.tab_remote),
+//                ServerControlActivity.class, null);
         bar.setSelectedNavigationItem(PreferenceManager.getDefaultSharedPreferences(this)
-                .getInt(INSTANCESTATE_TAB, Util.CATEGORY_TAB_INDEX));
+                .getInt(INSTANCESTATE_TAB, Util.SDCARD_TAB_INDEX));
     }
 
     @Override

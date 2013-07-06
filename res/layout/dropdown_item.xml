@@ -11,24 +11,24 @@
         android:layout_width="fill_parent"
         android:layout_height="fill_parent"
         android:gravity="center_vertical"
-        android:orientation="horizontal"
-        android:layout_marginLeft="10dip">
+        android:orientation="vertical"
+        android:layout_margin="10dip">
 
         <ImageView
             android:id="@+id/item_icon"
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:scaleType="fitCenter"
             android:gravity="center"
             android:layout_gravity="center_vertical"
-            android:layout_marginRight="5dip" />
+            android:layout_margin="2dip" />
 
         <TextView
             android:id="@+id/path_name"
             android:layout_width="fill_parent"
-            android:layout_height="88px"
+            android:layout_height="wrap_content"
             android:singleLine="true"
-            android:gravity="center_vertical"
+            android:gravity="center_horizontal"
             android:textAppearance="?android:attr/textAppearanceSmall" />
 
     </LinearLayout>

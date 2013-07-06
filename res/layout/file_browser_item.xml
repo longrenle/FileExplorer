@@ -5,18 +5,19 @@
     android:layout_height="wrap_content"
     android:paddingTop="5dip"
     android:paddingBottom="5dip"
+    android:paddingLeft="3dip"
     android:orientation="horizontal"
     android:gravity="center_vertical">
 
     <FrameLayout
         android:layout_width="wrap_content"
-        android:layout_height="fill_parent"
+        android:layout_height="50dp"
         android:layout_gravity="center"
         android:gravity="center">
         <ImageView
             android:id="@+id/file_image_frame"
-            android:layout_width="65px"
-            android:layout_height="65px"
+            android:layout_width="60dp"
+            android:layout_height="60dp"
             android:scaleType="centerInside"
             android:gravity="center"
             android:background="@drawable/image_icon_bg"
@@ -24,9 +25,10 @@
             android:visibility="gone" />
         <ImageView
             android:id="@+id/file_image"
-            android:layout_width="59px"
-            android:layout_height="59px"
-            android:scaleType="centerInside"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:layout_margin="3dp"
+            android:scaleType="fitXY"
             android:gravity="center"
             android:layout_gravity="center" />
     </FrameLayout>
@@ -76,7 +78,7 @@
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
                 android:layout_gravity="left"
-                android:layout_marginLeft="14px"
+                android:layout_marginLeft="14dip"
                 android:gravity="left"
                 android:textAppearance="?android:attr/textAppearanceSmall" />
 

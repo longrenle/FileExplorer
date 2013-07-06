@@ -419,6 +419,6 @@ public class Util {
 
     public static String sZipFileMimeType = "application/zip";
 
-    public static int CATEGORY_TAB_INDEX = 0;
-    public static int SDCARD_TAB_INDEX = 1;
+    public static int CATEGORY_TAB_INDEX = 1;
+    public static int SDCARD_TAB_INDEX = 0;
 }
