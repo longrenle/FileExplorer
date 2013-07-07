@@ -17,7 +17,7 @@
  * along with SwiFTP.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package net.micode.fileexplorer;
+package net.micode.fileexplorer.fileview;
 
 import java.io.File;
 import java.net.URISyntaxException;
@@ -43,10 +43,26 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
-import net.micode.fileexplorer.FileExplorerTabActivity.IBackPressedListener;
+import net.micode.fileexplorer.FileCategoryHelper;
+import net.micode.fileexplorer.FileIconHelper;
+import net.micode.fileexplorer.FileInfo;
+import net.micode.fileexplorer.FileSortHelper;
+import net.micode.fileexplorer.FileViewInteractionHub;
+import net.micode.fileexplorer.GlobalConsts;
+import net.micode.fileexplorer.IFileInteractionListener;
+import net.micode.fileexplorer.R;
+import net.micode.fileexplorer.Settings;
+import net.micode.fileexplorer.Util;
 import net.micode.fileexplorer.FileViewInteractionHub.Mode;
+import net.micode.fileexplorer.R.id;
+import net.micode.fileexplorer.R.layout;
+import net.micode.fileexplorer.R.string;
+import net.micode.fileexplorer.main.ActivitiesManager;
+import net.micode.fileexplorer.main.FileExplorerPreferenceActivity;
+import net.micode.fileexplorer.main.FileExplorerTabActivity;
+import net.micode.fileexplorer.main.FileExplorerTabActivity.IBackPressedListener;
 
-public class FileViewActivity extends Fragment implements
+public class FileViewFragment extends Fragment implements
         IFileInteractionListener, IBackPressedListener {
 
     public static final String EXT_FILTER_KEY = "ext_filter";

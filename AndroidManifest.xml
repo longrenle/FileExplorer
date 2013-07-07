@@ -29,8 +29,9 @@
     <uses-permission android:name="android.permission.INTERNET" />
     <uses-permission android:name="android.permission.CHANGE_WIFI_STATE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <!-- 
     <uses-permission android:name="android.permission.INSTALL_PACKAGES" />
-    <uses-permission android:name="android.permission.DELETE_PACKAGES" />
+    <uses-permission android:name="android.permission.DELETE_PACKAGES" /> -->
     <uses-permission android:name="android.permission.WAKE_LOCK" />
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
@@ -40,7 +41,7 @@
         android:theme="@android:style/Theme.Holo.Light"
         android:uiOptions="splitActionBarWhenNarrow">
         <activity
-            android:name=".FileExplorerTabActivity"
+            android:name="net.micode.fileexplorer.main.FileExplorerTabActivity"
             android:configChanges="screenSize|keyboardHidden"
             android:screenOrientation="portrait">
             <intent-filter >
@@ -68,7 +69,7 @@
             </intent-filter>
         </activity>
 
-        <activity android:name=".net.micode.fileexplorer.SearchActivity" >
+        <activity android:name="net.micode.fileexplorer.main.SearchActivity" >
             <intent-filter >
                 <action android:name="android.intent.action.SEARCH" />
 
@@ -83,7 +84,7 @@
         <activity
             android:label="@string/menu_setting"
             android:launchMode="singleTop"
-            android:name="FileExplorerPreferenceActivity"
+            android:name="net.micode.fileexplorer.main.FileExplorerPreferenceActivity"
             android:theme="@android:style/Theme.Holo.Light.NoActionBar" >
         </activity>
 

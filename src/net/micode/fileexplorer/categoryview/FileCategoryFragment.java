@@ -1,5 +1,5 @@
 
-package net.micode.fileexplorer;
+package net.micode.fileexplorer.categoryview;
 
 import android.app.Activity;
 import android.app.Fragment;
@@ -20,12 +20,28 @@ import android.view.ViewGroup;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import net.micode.fileexplorer.FavoriteDatabaseHelper;
+import net.micode.fileexplorer.FileCategoryHelper;
+import net.micode.fileexplorer.FileIconHelper;
+import net.micode.fileexplorer.FileInfo;
+import net.micode.fileexplorer.FileSortHelper;
+import net.micode.fileexplorer.FileViewInteractionHub;
+import net.micode.fileexplorer.GlobalConsts;
+import net.micode.fileexplorer.IFileInteractionListener;
+import net.micode.fileexplorer.R;
+import net.micode.fileexplorer.Util;
 import net.micode.fileexplorer.FavoriteDatabaseHelper.FavoriteDatabaseListener;
 import net.micode.fileexplorer.FileCategoryHelper.CategoryInfo;
 import net.micode.fileexplorer.FileCategoryHelper.FileCategory;
-import net.micode.fileexplorer.FileExplorerTabActivity.IBackPressedListener;
 import net.micode.fileexplorer.FileViewInteractionHub.Mode;
+import net.micode.fileexplorer.R.drawable;
+import net.micode.fileexplorer.R.id;
+import net.micode.fileexplorer.R.layout;
+import net.micode.fileexplorer.R.string;
 import net.micode.fileexplorer.Util.SDCardInfo;
+import net.micode.fileexplorer.fileview.FileViewFragment;
+import net.micode.fileexplorer.main.FileExplorerTabActivity;
+import net.micode.fileexplorer.main.FileExplorerTabActivity.IBackPressedListener;
 
 import java.util.ArrayList;
 import java.util.Collection;
@@ -33,7 +49,7 @@ import java.util.HashMap;
 import java.util.Timer;
 import java.util.TimerTask;
 
-public class FileCategoryActivity extends Fragment implements IFileInteractionListener,
+public class FileCategoryFragment extends Fragment implements IFileInteractionListener,
         FavoriteDatabaseListener, IBackPressedListener {
 
     public static final String EXT_FILETER_KEY = "ext_filter";
@@ -66,7 +82,7 @@ public class FileCategoryActivity extends Fragment implements IFileInteractionLi
 
     private View mRootView;
 
-    private FileViewActivity mFileViewActivity;
+    private FileViewFragment mFileViewActivity;
 
     private boolean mConfigurationChanged = false;
 
@@ -88,7 +104,7 @@ public class FileCategoryActivity extends Fragment implements IFileInteractionLi
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container, Bundle savedInstanceState) {
         mActivity = getActivity();
-        mFileViewActivity = (FileViewActivity) ((FileExplorerTabActivity) mActivity)
+        mFileViewActivity = (FileViewFragment) ((FileExplorerTabActivity) mActivity)
                 .getFragment(Util.SDCARD_TAB_INDEX);
         mRootView = inflater.inflate(R.layout.file_explorer_category, container, false);
         curViewPage = ViewPage.Invalid;

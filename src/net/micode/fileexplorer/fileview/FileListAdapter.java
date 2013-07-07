@@ -17,7 +17,7 @@
  * along with SwiFTP.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package net.micode.fileexplorer;
+package net.micode.fileexplorer.fileview;
 
 import android.content.Context;
 import android.view.LayoutInflater;
@@ -26,6 +26,15 @@ import android.view.ViewGroup;
 import android.widget.ArrayAdapter;
 
 import java.util.List;
+
+import net.micode.fileexplorer.FileIconHelper;
+import net.micode.fileexplorer.FileInfo;
+import net.micode.fileexplorer.FileListItem;
+import net.micode.fileexplorer.FileViewInteractionHub;
+import net.micode.fileexplorer.R;
+import net.micode.fileexplorer.FileListItem.FileItemOnClickListener;
+import net.micode.fileexplorer.R.id;
+import net.micode.fileexplorer.R.layout;
 
 public class FileListAdapter extends ArrayAdapter<FileInfo> {
     private LayoutInflater mInflater;

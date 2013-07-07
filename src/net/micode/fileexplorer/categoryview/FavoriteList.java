@@ -1,5 +1,5 @@
 
-package net.micode.fileexplorer;
+package net.micode.fileexplorer.categoryview;
 
 import android.content.ActivityNotFoundException;
 import android.content.Context;
@@ -17,7 +17,18 @@ import android.widget.AdapterView.OnItemClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
+import net.micode.fileexplorer.FavoriteDatabaseHelper;
+import net.micode.fileexplorer.FavoriteItem;
+import net.micode.fileexplorer.FavoriteListAdapter;
+import net.micode.fileexplorer.FileIconHelper;
+import net.micode.fileexplorer.IntentBuilder;
+import net.micode.fileexplorer.R;
+import net.micode.fileexplorer.Util;
 import net.micode.fileexplorer.FavoriteDatabaseHelper.FavoriteDatabaseListener;
+import net.micode.fileexplorer.R.layout;
+import net.micode.fileexplorer.R.string;
+import net.micode.fileexplorer.fileview.FileViewFragment;
+import net.micode.fileexplorer.main.FileExplorerTabActivity;
 
 import java.io.File;
 import java.util.ArrayList;
@@ -122,7 +133,7 @@ public class FavoriteList implements FavoriteDatabaseListener {
 
         if (favorite.fileInfo.IsDir) {
             FileExplorerTabActivity activity = (FileExplorerTabActivity) mContext;
-            ((FileViewActivity) activity.getFragment(Util.SDCARD_TAB_INDEX))
+            ((FileViewFragment) activity.getFragment(Util.SDCARD_TAB_INDEX))
                     .setPath(favorite.location);
             activity.getActionBar().setSelectedNavigationItem(Util.SDCARD_TAB_INDEX);
         } else {

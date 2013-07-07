@@ -45,6 +45,8 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
 
+import net.micode.fileexplorer.fileview.FileViewFragment;
+
 public class Util {
     private static String ANDROID_SECURE = "/mnt/sdcard/.android_secure";
 
@@ -381,7 +383,7 @@ public class Util {
         notification.defaults = Notification.DEFAULT_SOUND;
         if (intent == null) {
             // FIXEME: category tab is disabled
-            intent = new Intent(context, FileViewActivity.class);
+            intent = new Intent(context, FileViewFragment.class);
         }
         PendingIntent contentIntent = PendingIntent.getActivity(context, 0, intent, PendingIntent.FLAG_ONE_SHOT);
         notification.setLatestEventInfo(context, title, body, contentIntent);

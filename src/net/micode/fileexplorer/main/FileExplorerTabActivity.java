@@ -17,7 +17,7 @@
  * along with SwiFTP.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package net.micode.fileexplorer;
+package net.micode.fileexplorer.main;
 
 import android.app.ActionBar;
 import android.app.ActionBar.Tab;
@@ -34,6 +34,14 @@ import android.support.v4.view.ViewPager;
 import android.view.ActionMode;
 
 import java.util.ArrayList;
+
+import net.micode.fileexplorer.R;
+import net.micode.fileexplorer.Util;
+import net.micode.fileexplorer.R.id;
+import net.micode.fileexplorer.R.layout;
+import net.micode.fileexplorer.R.string;
+import net.micode.fileexplorer.categoryview.FileCategoryFragment;
+import net.micode.fileexplorer.fileview.FileViewFragment;
 
 public class FileExplorerTabActivity extends Activity {
     private static final String INSTANCESTATE_TAB = "tab";
@@ -56,9 +64,9 @@ public class FileExplorerTabActivity extends Activity {
 
         mTabsAdapter = new TabsAdapter(this, mViewPager);
         mTabsAdapter.addTab(bar.newTab().setText(R.string.tab_sd),
-                FileViewActivity.class, null);
+                FileViewFragment.class, null);
         mTabsAdapter.addTab(bar.newTab().setText(R.string.tab_category),
-                FileCategoryActivity.class, null);
+                FileCategoryFragment.class, null);
 //        mTabsAdapter.addTab(bar.newTab().setText(R.string.tab_remote),
 //                ServerControlActivity.class, null);
         bar.setSelectedNavigationItem(PreferenceManager.getDefaultSharedPreferences(this)
@@ -76,7 +84,7 @@ public class FileExplorerTabActivity extends Activity {
     @Override
     public void onConfigurationChanged(Configuration newConfig) {
         if (getActionBar().getSelectedNavigationIndex() == Util.CATEGORY_TAB_INDEX) {
-            FileCategoryActivity categoryFragement =(FileCategoryActivity) mTabsAdapter.getItem(Util.CATEGORY_TAB_INDEX);
+            FileCategoryFragment categoryFragement =(FileCategoryFragment) mTabsAdapter.getItem(Util.CATEGORY_TAB_INDEX);
             if (categoryFragement.isHomePage()) {
                 reInstantiateCategoryTab();
             } else {

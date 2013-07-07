@@ -17,10 +17,18 @@
  * along with SwiFTP.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package net.micode.fileexplorer;
+package net.micode.fileexplorer.ftpview;
 
 
-import net.micode.fileexplorer.FileExplorerTabActivity.IBackPressedListener;
+import net.micode.fileexplorer.FTPServerService;
+import net.micode.fileexplorer.R;
+import net.micode.fileexplorer.R.color;
+import net.micode.fileexplorer.R.drawable;
+import net.micode.fileexplorer.R.id;
+import net.micode.fileexplorer.R.layout;
+import net.micode.fileexplorer.R.string;
+import net.micode.fileexplorer.main.FileExplorerTabActivity;
+import net.micode.fileexplorer.main.FileExplorerTabActivity.IBackPressedListener;
 
 import org.swiftp.Defaults;
 import org.swiftp.Globals;
@@ -55,7 +63,7 @@ import android.widget.Toast;
 import java.io.File;
 import java.net.InetAddress;
 
-public class ServerControlActivity extends Fragment implements IBackPressedListener {
+public class ServerControlFragment extends Fragment implements IBackPressedListener {
 
     private TextView ipText;
 
@@ -86,7 +94,7 @@ public class ServerControlActivity extends Fragment implements IBackPressedListe
 
     private View mRootView;
 
-    public ServerControlActivity() {
+    public ServerControlFragment() {
     }
 
     @Override

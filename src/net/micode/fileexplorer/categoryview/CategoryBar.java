@@ -17,11 +17,14 @@
  * along with SwiFTP.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package net.micode.fileexplorer;
+package net.micode.fileexplorer.categoryview;
 
 import java.util.ArrayList;
 import java.util.Timer;
 import java.util.TimerTask;
+
+import net.micode.fileexplorer.R;
+import net.micode.fileexplorer.R.drawable;
 
 import android.content.Context;
 import android.graphics.Canvas;

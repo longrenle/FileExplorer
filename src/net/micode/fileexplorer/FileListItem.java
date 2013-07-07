@@ -31,6 +31,8 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 
 import net.micode.fileexplorer.FileViewInteractionHub.Mode;
+import net.micode.fileexplorer.fileview.FileViewFragment;
+import net.micode.fileexplorer.main.FileExplorerTabActivity;
 
 public class FileListItem {
     public static void setupFileListItemInfo(Context context, View view,
@@ -158,14 +160,14 @@ public class FileListItem {
                     mode.finish();
                     break;
                 case R.id.action_copy:
-                    ((FileViewActivity) ((FileExplorerTabActivity) mContext)
+                    ((FileViewFragment) ((FileExplorerTabActivity) mContext)
                             .getFragment(Util.SDCARD_TAB_INDEX))
                             .copyFile(mFileViewInteractionHub.getSelectedFileList());
                     mode.finish();
                     scrollToSDcardTab();
                     break;
                 case R.id.action_move:
-                    ((FileViewActivity) ((FileExplorerTabActivity) mContext)
+                    ((FileViewFragment) ((FileExplorerTabActivity) mContext)
                             .getFragment(Util.SDCARD_TAB_INDEX))
                             .moveToFile(mFileViewInteractionHub.getSelectedFileList());
                     mode.finish();

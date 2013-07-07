@@ -51,6 +51,7 @@ import org.swiftp.TcpListener;
 import org.swiftp.UiUpdater;
 import org.swiftp.Util;
 import net.micode.fileexplorer.R;
+import net.micode.fileexplorer.main.FileExplorerTabActivity;
 
 public class FTPServerService extends Service implements Runnable {
     protected static Thread serverThread = null;
