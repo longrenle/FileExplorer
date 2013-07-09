@@ -17,10 +17,17 @@
  * along with SwiFTP.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package net.micode.fileexplorer;
+package net.micode.fileexplorer.view;
 
 import java.io.File;
 
+import net.micode.fileexplorer.FileIconHelper;
+import net.micode.fileexplorer.R;
+import net.micode.fileexplorer.Util;
+import net.micode.fileexplorer.R.drawable;
+import net.micode.fileexplorer.R.id;
+import net.micode.fileexplorer.R.layout;
+import net.micode.fileexplorer.R.string;
 import net.micode.fileexplorer.entity.FileInfo;
 
 import android.app.AlertDialog;

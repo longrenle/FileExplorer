@@ -30,7 +30,8 @@ import android.provider.MediaStore.Video;
 import android.util.Log;
 
 import net.micode.fileexplorer.FileSortHelper.SortMethod;
-import net.micode.fileexplorer.MediaFile.MediaFileType;
+import net.micode.fileexplorer.constant.MediaFile;
+import net.micode.fileexplorer.constant.MediaFile.MediaFileType;
 
 import java.io.FilenameFilter;
 import java.util.HashMap;
