@@ -22,6 +22,8 @@ package net.micode.fileexplorer;
 import java.io.File;
 import java.util.ArrayList;
 
+import net.micode.fileexplorer.entity.FileInfo;
+
 import android.app.AlertDialog;
 import android.content.Context;
 import android.content.DialogInterface;

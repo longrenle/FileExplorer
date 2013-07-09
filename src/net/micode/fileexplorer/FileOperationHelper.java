@@ -23,6 +23,8 @@ import java.io.File;
 import java.io.FilenameFilter;
 import java.util.ArrayList;
 
+import net.micode.fileexplorer.entity.FileInfo;
+
 import android.os.AsyncTask;
 import android.os.Environment;
 import android.text.TextUtils;

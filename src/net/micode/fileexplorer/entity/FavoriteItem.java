@@ -17,30 +17,28 @@
  * along with SwiFTP.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package net.micode.fileexplorer;
+package net.micode.fileexplorer.entity;
 
-public class FileInfo {
 
-    public String fileName;
+public class FavoriteItem {
+    // id in the database
+    public long id;
 
-    public String filePath;
+    public String title;
 
-    public long fileSize;
+    // path
+    public String location;
 
-    public boolean IsDir;
+    public FileInfo fileInfo;
 
-    public int Count;
+    public FavoriteItem(String t, String l) {
+        title = t;
+        location = l;
+    }
 
-    public long ModifiedDate;
-
-    public boolean Selected;
-
-    public boolean canRead;
-
-    public boolean canWrite;
-
-    public boolean isHidden;
-
-    public long dbId; // id in the database, if is from database
-
+    public FavoriteItem(long i, String t, String l) {
+        id = i;
+        title = t;
+        location = l;
+    }
 }

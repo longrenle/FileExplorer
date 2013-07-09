@@ -21,11 +21,11 @@ package net.micode.fileexplorer.main;
 
 import java.io.File;
 
-import net.micode.fileexplorer.GlobalConsts;
 import net.micode.fileexplorer.R;
 import net.micode.fileexplorer.Util;
 import net.micode.fileexplorer.R.string;
 import net.micode.fileexplorer.R.xml;
+import net.micode.fileexplorer.constant.GlobalConsts;
 
 import android.content.Context;
 import android.content.SharedPreferences;

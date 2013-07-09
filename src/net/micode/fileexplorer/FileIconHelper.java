@@ -22,6 +22,7 @@ package net.micode.fileexplorer;
 
 import net.micode.fileexplorer.FileCategoryHelper.FileCategory;
 import net.micode.fileexplorer.FileIconLoader.IconLoadFinishListener;
+import net.micode.fileexplorer.entity.FileInfo;
 
 import android.content.Context;
 import android.view.View;

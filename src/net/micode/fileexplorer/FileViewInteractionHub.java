@@ -60,6 +60,8 @@ import net.micode.fileexplorer.FileListItem.ModeCallback;
 import net.micode.fileexplorer.FileOperationHelper.IOperationProgressListener;
 import net.micode.fileexplorer.FileSortHelper.SortMethod;
 import net.micode.fileexplorer.TextInputDialog.OnFinishListener;
+import net.micode.fileexplorer.constant.GlobalConsts;
+import net.micode.fileexplorer.entity.FileInfo;
 import net.micode.fileexplorer.fileview.FileViewFragment.SelectFilesCallback;
 import net.micode.fileexplorer.main.FileExplorerPreferenceActivity;
 import net.micode.fileexplorer.main.FileExplorerTabActivity;

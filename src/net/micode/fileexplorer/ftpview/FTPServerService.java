@@ -17,7 +17,7 @@ You should have received a copy of the GNU General Public License
 along with SwiFTP.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package net.micode.fileexplorer;
+package net.micode.fileexplorer.ftpview;
 
 import java.io.IOException;
 import java.net.InetAddress;
@@ -51,6 +51,9 @@ import org.swiftp.TcpListener;
 import org.swiftp.UiUpdater;
 import org.swiftp.Util;
 import net.micode.fileexplorer.R;
+import net.micode.fileexplorer.R.drawable;
+import net.micode.fileexplorer.R.string;
+import net.micode.fileexplorer.constant.GlobalConsts;
 import net.micode.fileexplorer.main.FileExplorerTabActivity;
 
 public class FTPServerService extends Service implements Runnable {

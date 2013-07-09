@@ -19,7 +19,7 @@ along with SwiFTP.  If not, see <http://www.gnu.org/licenses/>.
 
 package org.swiftp;
 
-import net.micode.fileexplorer.FTPServerService;
+import net.micode.fileexplorer.ftpview.FTPServerService;
 
 import java.net.ServerSocket;
 import java.net.Socket;

@@ -18,8 +18,6 @@ import android.widget.ArrayAdapter;
 import android.widget.ListView;
 
 import net.micode.fileexplorer.FavoriteDatabaseHelper;
-import net.micode.fileexplorer.FavoriteItem;
-import net.micode.fileexplorer.FavoriteListAdapter;
 import net.micode.fileexplorer.FileIconHelper;
 import net.micode.fileexplorer.IntentBuilder;
 import net.micode.fileexplorer.R;
@@ -27,6 +25,7 @@ import net.micode.fileexplorer.Util;
 import net.micode.fileexplorer.FavoriteDatabaseHelper.FavoriteDatabaseListener;
 import net.micode.fileexplorer.R.layout;
 import net.micode.fileexplorer.R.string;
+import net.micode.fileexplorer.entity.FavoriteItem;
 import net.micode.fileexplorer.fileview.FileViewFragment;
 import net.micode.fileexplorer.main.FileExplorerTabActivity;
 

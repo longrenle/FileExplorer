@@ -45,6 +45,9 @@ import java.util.ArrayList;
 import java.util.Date;
 import java.util.HashSet;
 
+import net.micode.fileexplorer.constant.GlobalConsts;
+import net.micode.fileexplorer.entity.FavoriteItem;
+import net.micode.fileexplorer.entity.FileInfo;
 import net.micode.fileexplorer.fileview.FileViewFragment;
 
 public class Util {

@@ -25,6 +25,8 @@ import android.view.View;
 
 import java.util.Collection;
 
+import net.micode.fileexplorer.entity.FileInfo;
+
 public interface IFileInteractionListener {
 
     public View getViewById(int id);

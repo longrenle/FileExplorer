@@ -31,6 +31,7 @@ import android.view.View.OnClickListener;
 import android.widget.ImageView;
 
 import net.micode.fileexplorer.FileViewInteractionHub.Mode;
+import net.micode.fileexplorer.entity.FileInfo;
 import net.micode.fileexplorer.fileview.FileViewFragment;
 import net.micode.fileexplorer.main.FileExplorerTabActivity;
 

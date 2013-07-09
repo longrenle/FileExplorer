@@ -92,7 +92,7 @@
             android:name="android.app.default_searchable"
             android:value=".SearchActivity" />
 
-        <service android:name=".FTPServerService" />
+        <service android:name="net.micode.fileexplorer.ftpview.FTPServerService" />
     </application>
 
 </manifest>

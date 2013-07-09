@@ -31,7 +31,6 @@ import java.util.HashMap;
 
 import net.micode.fileexplorer.FileCategoryHelper;
 import net.micode.fileexplorer.FileIconHelper;
-import net.micode.fileexplorer.FileInfo;
 import net.micode.fileexplorer.FileListItem;
 import net.micode.fileexplorer.FileViewInteractionHub;
 import net.micode.fileexplorer.R;
@@ -39,6 +38,7 @@ import net.micode.fileexplorer.Util;
 import net.micode.fileexplorer.FileListItem.FileItemOnClickListener;
 import net.micode.fileexplorer.R.id;
 import net.micode.fileexplorer.R.layout;
+import net.micode.fileexplorer.entity.FileInfo;
 
 public class FileListCursorAdapter extends CursorAdapter {
 

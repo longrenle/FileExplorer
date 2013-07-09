@@ -20,7 +20,6 @@
 package net.micode.fileexplorer.ftpview;
 
 
-import net.micode.fileexplorer.FTPServerService;
 import net.micode.fileexplorer.R;
 import net.micode.fileexplorer.R.color;
 import net.micode.fileexplorer.R.drawable;

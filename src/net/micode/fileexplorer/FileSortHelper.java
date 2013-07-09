@@ -22,6 +22,8 @@ package net.micode.fileexplorer;
 import java.util.Comparator;
 import java.util.HashMap;
 
+import net.micode.fileexplorer.entity.FileInfo;
+
 public class FileSortHelper {
 
     public enum SortMethod {

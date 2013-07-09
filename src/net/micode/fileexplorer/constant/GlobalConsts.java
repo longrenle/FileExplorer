@@ -17,7 +17,7 @@
  * along with SwiFTP.  If not, see <http://www.gnu.org/licenses/>.
  */
 
-package net.micode.fileexplorer;
+package net.micode.fileexplorer.constant;
 
 public abstract class GlobalConsts {
     public static final String KEY_BASE_SD = "key_base_sd";
