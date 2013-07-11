@@ -31,11 +31,11 @@ import java.util.HashMap;
 
 import net.micode.fileexplorer.FileCategoryHelper;
 import net.micode.fileexplorer.FileIconHelper;
-import net.micode.fileexplorer.FileListItem;
+import net.micode.fileexplorer.FileListHelper;
 import net.micode.fileexplorer.FileViewInteractionHub;
 import net.micode.fileexplorer.R;
 import net.micode.fileexplorer.Util;
-import net.micode.fileexplorer.FileListItem.FileItemOnClickListener;
+import net.micode.fileexplorer.FileListHelper.FileItemOnClickListener;
 import net.micode.fileexplorer.R.id;
 import net.micode.fileexplorer.R.layout;
 import net.micode.fileexplorer.entity.FileInfo;
@@ -73,10 +73,10 @@ public class FileListCursorAdapter extends CursorAdapter {
             fileInfo.fileSize = cursor.getLong(FileCategoryHelper.COLUMN_SIZE);
             fileInfo.ModifiedDate = cursor.getLong(FileCategoryHelper.COLUMN_DATE);
         }
-        FileListItem.setupFileListItemInfo(mContext, view, fileInfo, mFileIcon,
+        FileListHelper.setupFileListItemInfo(mContext, view, fileInfo, mFileIcon,
                 mFileViewInteractionHub);
         view.findViewById(R.id.category_file_checkbox_area).setOnClickListener(
-                new FileListItem.FileItemOnClickListener(mContext, mFileViewInteractionHub));
+                new FileListHelper.FileItemOnClickListener(mContext, mFileViewInteractionHub));
     }
 
     @Override

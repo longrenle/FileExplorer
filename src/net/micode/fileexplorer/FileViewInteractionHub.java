@@ -56,7 +56,7 @@ import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
 
-import net.micode.fileexplorer.FileListItem.ModeCallback;
+import net.micode.fileexplorer.FileListHelper.ModeCallback;
 import net.micode.fileexplorer.FileOperationHelper.IOperationProgressListener;
 import net.micode.fileexplorer.FileSortHelper.SortMethod;
 import net.micode.fileexplorer.constant.GlobalConsts;

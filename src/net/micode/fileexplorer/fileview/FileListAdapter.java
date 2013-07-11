@@ -28,10 +28,10 @@ import android.widget.ArrayAdapter;
 import java.util.List;
 
 import net.micode.fileexplorer.FileIconHelper;
-import net.micode.fileexplorer.FileListItem;
+import net.micode.fileexplorer.FileListHelper;
 import net.micode.fileexplorer.FileViewInteractionHub;
 import net.micode.fileexplorer.R;
-import net.micode.fileexplorer.FileListItem.FileItemOnClickListener;
+import net.micode.fileexplorer.FileListHelper.FileItemOnClickListener;
 import net.micode.fileexplorer.R.id;
 import net.micode.fileexplorer.R.layout;
 import net.micode.fileexplorer.entity.FileInfo;
@@ -64,11 +64,11 @@ public class FileListAdapter extends ArrayAdapter<FileInfo> {
             view = mInflater.inflate(R.layout.file_browser_item, parent, false);
         }
 
-        FileInfo lFileInfo = mFileViewInteractionHub.getItem(position);
-        FileListItem.setupFileListItemInfo(mContext, view, lFileInfo,
+        FileInfo lFileInfo = this.getItem(position);
+        FileListHelper.setupFileListItemInfo(mContext, view, lFileInfo,
                 mFileIcon, mFileViewInteractionHub);
         view.findViewById(R.id.file_checkbox_area).setOnClickListener(
-                new FileListItem.FileItemOnClickListener(mContext,
+                new FileListHelper.FileItemOnClickListener(mContext,
                         mFileViewInteractionHub));
         return view;
     }

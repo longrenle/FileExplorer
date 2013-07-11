@@ -35,7 +35,7 @@ import net.micode.fileexplorer.entity.FileInfo;
 import net.micode.fileexplorer.fileview.FileViewFragment;
 import net.micode.fileexplorer.main.FileExplorerTabActivity;
 
-public class FileListItem {
+public class FileListHelper {
     public static void setupFileListItemInfo(Context context, View view,
             FileInfo fileInfo, FileIconHelper fileIcon,
             FileViewInteractionHub fileViewInteractionHub) {
