@@ -32,14 +32,12 @@ import android.preference.PreferenceManager;
 import android.support.v13.app.FragmentPagerAdapter;
 import android.support.v4.view.ViewPager;
 import android.view.ActionMode;
+import android.view.Window;
 
 import java.util.ArrayList;
 
 import net.micode.fileexplorer.R;
 import net.micode.fileexplorer.Util;
-import net.micode.fileexplorer.R.id;
-import net.micode.fileexplorer.R.layout;
-import net.micode.fileexplorer.R.string;
 import net.micode.fileexplorer.categoryview.FileCategoryFragment;
 import net.micode.fileexplorer.fileview.FileViewFragment;
 
@@ -53,6 +51,8 @@ public class FileExplorerTabActivity extends Activity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        
+        getWindow().requestFeature(Window.FEATURE_ACTION_BAR);
 
         setContentView(R.layout.fragment_pager);
         mViewPager = (ViewPager) findViewById(R.id.pager);
