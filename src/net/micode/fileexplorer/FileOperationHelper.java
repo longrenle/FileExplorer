@@ -37,17 +37,17 @@ public class FileOperationHelper {
 
     private boolean mMoving;
 
-    private IOperationProgressListener mOperationListener;
+    private IFileOperationProgressListener mOperationListener;
 
     private FilenameFilter mFilter;
 
-    public interface IOperationProgressListener {
+    public interface IFileOperationProgressListener {
         void onFinish();
 
         void onFileChanged(String path);
     }
 
-    public FileOperationHelper(IOperationProgressListener l) {
+    public FileOperationHelper(IFileOperationProgressListener l) {
         mOperationListener = l;
     }
 

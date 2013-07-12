@@ -57,7 +57,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import net.micode.fileexplorer.FileListHelper.ModeCallback;
-import net.micode.fileexplorer.FileOperationHelper.IOperationProgressListener;
+import net.micode.fileexplorer.FileOperationHelper.IFileOperationProgressListener;
 import net.micode.fileexplorer.FileSortHelper.SortMethod;
 import net.micode.fileexplorer.constant.GlobalConsts;
 import net.micode.fileexplorer.entity.FileInfo;
@@ -68,7 +68,7 @@ import net.micode.fileexplorer.view.InformationDialog;
 import net.micode.fileexplorer.view.TextInputDialog;
 import net.micode.fileexplorer.view.TextInputDialog.OnFinishListener;
 
-public class FileViewInteractionHub implements IOperationProgressListener {
+public class FileViewInteractionHub implements IFileOperationProgressListener {
     private static final String LOG_TAG = "FileViewInteractionHub";
 
     private IFileInteractionListener mFileViewListener;
